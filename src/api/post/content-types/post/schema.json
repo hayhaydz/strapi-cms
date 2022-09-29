@@ -12,20 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
     "content": {
       "type": "richtext"
     },
-    "Excerpt": {
+    "excerpt": {
       "type": "text",
       "maxLength": 200
     },
-    "Visibility": {
+    "visibility": {
       "type": "boolean"
     },
-    "CoverImage": {
+    "coverImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -44,15 +44,14 @@
       "relation": "oneToOne",
       "target": "api::author.author"
     },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Title"
+    "slug": {
+      "type": "uid"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "mappedBy": "post"
+      "inversedBy": "posts"
     }
   }
 }
