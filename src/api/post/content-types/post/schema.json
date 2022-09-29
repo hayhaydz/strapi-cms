@@ -45,7 +45,8 @@
       "target": "api::author.author"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "title"
     },
     "category": {
       "type": "relation",
